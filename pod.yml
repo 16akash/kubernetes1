@@ -1,4 +1,4 @@
-appversion: v1
+apiVersion: v1
 kind: Pod
 metadata: 
   name: prod-pod
@@ -7,4 +7,4 @@ spec:
     - name: ghee
       image: ghee1:v1.0.3
       ports:
-        -containerPort: 5656
+        - containerPort: 5656

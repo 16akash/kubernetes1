@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: prod-pod
+spec:
+  containers:
+    - name: vegetable
+      image: 16akash/vege:v1.0.0
+      ports:
+        - containerPort: 4000
+
+    - name: organic
+      image: 16akash/organic:v1.0.0
+      ports:
+        - containerPort: 5656 
