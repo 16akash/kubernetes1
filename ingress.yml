@@ -16,6 +16,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: prod-service
+                name: fitness-service
                 port:
                   number: 80 
