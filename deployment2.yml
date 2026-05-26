@@ -22,7 +22,8 @@ spec: #defines the behavior of the replicaset
           envFrom:
             - configMapRef:
                 name: akash-configmap
- 
+            - secretRef:
+                name: akash-secrete
  
 ---
 apiVersion: v1
