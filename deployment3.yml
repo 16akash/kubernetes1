@@ -31,6 +31,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: akash-configmap
+            - secretRef:
+                name: akash-secrete   
 
 ---
 
@@ -50,4 +52,4 @@ spec:
       port: 80
       targetPort: 5000
 
-  type: ClusterIP
+  type: LoadBalancer
