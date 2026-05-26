@@ -3,8 +3,10 @@ kind: Deployment
 
 metadata:
   name: fitness-deployment
+  namespace: akash-ns
+
   labels:
-    first: app
+    app: fitness
 
 spec:
   replicas: 2
@@ -26,6 +28,10 @@ spec:
           ports:
             - containerPort: 5000
 
+          envFrom:
+            - configMapRef:
+                name: akash-configmap
+
 ---
 
 apiVersion: v1
@@ -33,6 +39,7 @@ kind: Service
 
 metadata:
   name: fitness-service
+  namespace: akash-ns
 
 spec:
   selector:
